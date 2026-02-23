@@ -25,3 +25,10 @@ dist-ssr
 
 # Private writing drafts
 blog/
+
+# Local runtime artifacts
+data/
+dev.db
+dist-node/
+*.tsbuildinfo
+.env
