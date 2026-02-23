@@ -1,0 +1,52 @@
+[
+  {
+    "name": "BBC World",
+    "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+    "category": "海外"
+  },
+  {
+    "name": "The Guardian World",
+    "url": "https://www.theguardian.com/world/rss",
+    "category": "海外"
+  },
+  {
+    "name": "Gigazine",
+    "url": "https://gigazine.net/news/rss_2.0/",
+    "category": "テック"
+  },
+  {
+    "name": "CodeZine",
+    "url": "https://codezine.jp/rss/new/20/index.xml",
+    "category": "開発"
+  },
+  {
+    "name": "Publickey",
+    "url": "https://www.publickey1.jp/atom.xml",
+    "category": "開発"
+  },
+  {
+    "name": "ITmedia NEWS",
+    "url": "https://rss.itmedia.co.jp/rss/2.0/news_bursts.xml",
+    "category": "国内"
+  },
+  {
+    "name": "Qiita Trend",
+    "url": "https://qiita.com/popular-items/feed",
+    "category": "開発"
+  },
+  {
+    "name": "Hugging Face Blog",
+    "url": "https://huggingface.co/blog/feed.xml",
+    "category": "AI"
+  },
+  {
+    "name": "OpenAI Blog",
+    "url": "https://openai.com/blog/rss.xml",
+    "category": "AI"
+  },
+  {
+    "name": "Google DeepMind Blog",
+    "url": "https://deepmind.google/blog/rss.xml",
+    "category": "AI"
+  }
+]
