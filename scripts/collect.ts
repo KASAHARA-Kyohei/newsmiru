@@ -1,7 +1,8 @@
 import 'dotenv/config'
 import fs from 'node:fs/promises'
 import path from 'node:path'
-import { prisma } from '../server/prisma'
+import { db } from '../server/db/client'
+import { upsertArticle } from '../server/news/repository'
 
 type Source = { name: string; url: string; category: string }
 
@@ -56,23 +57,13 @@ async function run() {
       for (const i of items) {
         if (!i.title || !i.link) continue
         const publishedAt = i.pubDate ? new Date(i.pubDate) : null
-        await prisma.article.upsert({
-          where: { link: i.link },
-          create: {
-            source: source.name,
-            category: source.category,
-            title: i.title,
-            link: i.link,
-            publishedAt: Number.isNaN(publishedAt?.getTime()) ? null : publishedAt,
-            summary: summarize(i.description || i.title),
-          },
-          update: {
-            source: source.name,
-            category: source.category,
-            title: i.title,
-            publishedAt: Number.isNaN(publishedAt?.getTime()) ? null : publishedAt,
-            summary: summarize(i.description || i.title),
-          },
+        await upsertArticle({
+          source: source.name,
+          category: source.category,
+          title: i.title,
+          link: i.link,
+          publishedAt: Number.isNaN(publishedAt?.getTime()) ? null : publishedAt,
+          summary: summarize(i.description || i.title),
         })
         total++
       }
@@ -82,11 +73,11 @@ async function run() {
   }
 
   console.log(`[collect] upserted: ${total}`)
-  await prisma.$disconnect()
+  await db.$disconnect()
 }
 
 run().catch(async (e) => {
   console.error(e)
-  await prisma.$disconnect()
+  await db.$disconnect()
   process.exit(1)
 })
