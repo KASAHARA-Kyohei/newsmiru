@@ -35,6 +35,21 @@
     "category": "開発"
   },
   {
+    "name": "Zenn",
+    "url": "https://zenn.dev/feed",
+    "category": "開発"
+  },
+  {
+    "name": "Hacker News",
+    "url": "https://news.ycombinator.com/rss",
+    "category": "海外"
+  },
+  {
+    "name": "dev.to",
+    "url": "https://dev.to/feed",
+    "category": "開発"
+  },
+  {
     "name": "Hugging Face Blog",
     "url": "https://huggingface.co/blog/feed.xml",
     "category": "AI"
@@ -48,5 +63,25 @@
     "name": "Google DeepMind Blog",
     "url": "https://deepmind.google/blog/rss.xml",
     "category": "AI"
+  },
+  {
+    "name": "WHO News",
+    "url": "https://www.who.int/rss-feeds/news-english.xml",
+    "category": "健康"
+  },
+  {
+    "name": "Mayo Clinic News",
+    "url": "https://newsnetwork.mayoclinic.org/feed/",
+    "category": "健康"
+  },
+  {
+    "name": "NIH News Releases",
+    "url": "https://www.nih.gov/news-events/news-releases?format=rss",
+    "category": "健康"
+  },
+  {
+    "name": "FDA Press Releases",
+    "url": "https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml",
+    "category": "健康"
   }
 ]
